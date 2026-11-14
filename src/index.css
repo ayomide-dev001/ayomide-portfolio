@@ -7,10 +7,17 @@ html {
 body {
   margin: 0;
   min-width: 320px;
-  background: #f4f1ff;
+  background: #faf9fd;
+  color: #171321;
   font-family: Arial, sans-serif;
+  -webkit-font-smoothing: antialiased;
 }
 
 * {
   box-sizing: border-box;
+}
+
+::selection {
+  background: #ddd0ff;
+  color: #171321;
 }

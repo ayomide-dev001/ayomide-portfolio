@@ -1,12 +1,20 @@
 import Navbar from "./components/Navbar";
 import Hero from "./components/Hero";
 import About from "./components/About";
+import Reveal from "./components/Reveal";
+import Services from "./components/Services";
+import Skills from "./components/Skills";
+import Projects from "./components/Projects";
 function App() {
   return (
     <>
       <Navbar />
       <Hero />
       <About />
+      <Reveal />
+      <Services />
+      <Skills />
+      <Projects />
       <main id="home" className="min-h-screen px-6 pt-40 text-center">
         <p className="mb-3 text-sm font-semibold text-violet-600">HELLO, I'M</p>
 
