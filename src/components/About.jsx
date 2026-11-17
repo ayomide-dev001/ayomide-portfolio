@@ -143,21 +143,21 @@ export default function About() {
             {/* ANIMATED BUSINESS STATISTICS */}
             <div className="mt-16 grid grid-cols-1 gap-8 border-t border-violet-200 pt-8 sm:grid-cols-3 sm:gap-5">
               <StatCounter
-                value={2}
+                value={5}
                 suffix="+"
                 label="Years of Experience"
                 delay={0}
               />
 
               <StatCounter
-                value={8}
+                value={20}
                 suffix="+"
                 label="Projects Completed"
                 delay={150}
               />
 
               <StatCounter
-                value={3}
+                value={20}
                 suffix="+"
                 label="Happy Clients"
                 delay={300}
