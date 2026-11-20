@@ -75,7 +75,7 @@ export default function Services() {
           {services.map((service, index) => (
             <Reveal key={service.number} delay={index * 120}>
               <article className="group relative flex h-full min-h-[260px] flex-col overflow-hidden rounded-2xl border border-white/80 bg-white/45 p-6 shadow-[0_8px_30px_rgba(91,75,140,0.05)] backdrop-blur-xl transition-all duration-500 hover:-translate-y-2 hover:border-violet-200 hover:bg-white/75 hover:shadow-[0_18px_40px_rgba(91,75,140,0.12)]">
-                {/* Icon and Number */}
+                {/* Icon and Luxury Number */}
                 <div className="flex items-center justify-between">
                   <div
                     className={`flex h-12 w-12 items-center justify-center rounded-xl ${service.color}`}
@@ -83,9 +83,15 @@ export default function Services() {
                     <FontAwesomeIcon icon={service.icon} className="text-xl" />
                   </div>
 
-                  <span className="text-xs font-medium tracking-widest text-slate-400">
-                    {service.number}
-                  </span>
+                  <div className="relative flex h-12 min-w-[54px] items-center justify-center overflow-hidden rounded-xl border border-violet-200/70 bg-gradient-to-br from-white via-[#f6f1ff] to-[#eae0ff] px-3 shadow-[0_4px_14px_rgba(118,84,187,0.08)] transition-all duration-500 group-hover:border-violet-400 group-hover:shadow-[0_6px_20px_rgba(118,84,187,0.2)]">
+                    <span className="absolute inset-x-2 top-0 h-px bg-gradient-to-r from-transparent via-violet-400 to-transparent" />
+
+                    <span className="font-serif text-xl italic tracking-tight text-[#7654bb] transition-all duration-500 group-hover:scale-110 group-hover:text-[#4d347e]">
+                      {service.number}
+                    </span>
+
+                    <span className="absolute bottom-0 right-0 h-2 w-2 rounded-tl-full bg-violet-300/60" />
+                  </div>
                 </div>
 
                 {/* Card Content */}

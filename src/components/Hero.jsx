@@ -7,6 +7,7 @@ import {
   faHtml5,
   faGitAlt,
   faGithub,
+  faLinkedinIn,
 } from "@fortawesome/free-brands-svg-icons";
 
 import {
@@ -14,7 +15,6 @@ import {
   faDownload,
   faEnvelope,
   faStar,
-  faVial,
 } from "@fortawesome/free-solid-svg-icons";
 
 import Reveal from "./Reveal";
@@ -106,28 +106,36 @@ export default function Hero() {
 
                 <span className="h-px w-8 bg-slate-300" />
 
+                {/* GitHub */}
                 <a
                   href="https://github.com/ayomide-dev001"
                   target="_blank"
-                  rel="noreferrer"
-                  className="text-sm font-semibold text-slate-700 transition hover:text-violet-700"
+                  rel="noopener noreferrer"
+                  aria-label="GitHub"
+                  title="GitHub"
+                  className="flex h-10 w-10 items-center justify-center rounded-full border border-violet-200 bg-white text-slate-700 transition duration-300 hover:-translate-y-1 hover:border-violet-500 hover:bg-violet-700 hover:text-white"
                 >
-                  GitHub ↗
+                  <FontAwesomeIcon icon={faGithub} className="text-lg" />
                 </a>
 
+                {/* LinkedIn */}
                 <a
                   href="https://www.linkedin.com/in/ayomide-oguntunde"
                   target="_blank"
-                  rel="noreferrer"
-                  className="text-sm font-semibold text-slate-700 transition hover:text-violet-700"
+                  rel="noopener noreferrer"
+                  aria-label="LinkedIn"
+                  title="LinkedIn"
+                  className="flex h-10 w-10 items-center justify-center rounded-full border border-violet-200 bg-white text-slate-700 transition duration-300 hover:-translate-y-1 hover:border-violet-500 hover:bg-violet-700 hover:text-white"
                 >
-                  LinkedIn ↗
+                  <FontAwesomeIcon icon={faLinkedinIn} className="text-lg" />
                 </a>
 
+                {/* Email */}
                 <a
-                  href="mailto:your-email@example.com"
+                  href="mailto:ayomide0763@icloud.com"
                   aria-label="Email"
-                  className="text-slate-600 transition hover:text-violet-700"
+                  title="Email"
+                  className="flex h-10 w-10 items-center justify-center rounded-full border border-violet-200 bg-white text-slate-700 transition duration-300 hover:-translate-y-1 hover:border-violet-500 hover:bg-violet-700 hover:text-white"
                 >
                   <FontAwesomeIcon icon={faEnvelope} className="text-lg" />
                 </a>
@@ -199,44 +207,6 @@ export default function Hero() {
             <div className="absolute -bottom-12 right-12 h-16 w-16 rounded-full border border-violet-200 bg-gradient-to-br from-white to-violet-100 shadow-lg" />
           </Reveal>
         </div>
-
-        {/* TECHNOLOGY STRIP */}
-        <Reveal delay={200}>
-          <div className="mt-24 border-y border-violet-200/70 py-8">
-            <div className="flex flex-col gap-8 md:flex-row md:items-center md:justify-between">
-              <p className="text-[10px] font-semibold uppercase tracking-[0.25em] text-slate-500">
-                MY DIGITAL TOOLKIT
-              </p>
-
-              <div className="flex flex-wrap items-center justify-center gap-x-9 gap-y-7">
-                {[
-                  { name: "HTML5", icon: faHtml5, color: "#E34F26" },
-                  { name: "CSS3", icon: faCss3Alt, color: "#1572B6" },
-                  { name: "JavaScript", icon: faJs, color: "#F7DF1E" },
-                  { name: "React", icon: faReact, color: "#61DAFB" },
-                  { name: "Git", icon: faGitAlt, color: "#F05032" },
-                  { name: "GitHub", icon: faGithub, color: "#181717" },
-                  { name: "Testing", icon: faVial, color: "#7C3AED" },
-                ].map((tech) => (
-                  <div
-                    key={tech.name}
-                    title={tech.name}
-                    className="group flex flex-col items-center gap-2 transition-all duration-300 hover:-translate-y-1"
-                  >
-                    <FontAwesomeIcon
-                      icon={tech.icon}
-                      style={{ color: tech.color }}
-                      className="text-2xl transition-transform duration-300 group-hover:scale-125 sm:text-3xl"
-                    />
-                    <span className="text-[10px] font-medium text-slate-500 transition-colors group-hover:text-violet-700">
-                      {tech.name}
-                    </span>
-                  </div>
-                ))}
-              </div>
-            </div>
-          </div>
-        </Reveal>
       </div>
     </section>
   );

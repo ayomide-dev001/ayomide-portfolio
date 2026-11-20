@@ -6,6 +6,8 @@ import Services from "./components/Services";
 import Skills from "./components/Skills";
 import Projects from "./components/Projects";
 import Testimonials from "./components/Testimonials";
+import Contact from "./components/Contact";
+import Footer from "./components/Footer";
 function App() {
   return (
     <>
@@ -17,6 +19,8 @@ function App() {
       <Skills />
       <Projects />
       <Testimonials />
+      <Contact />
+      <Footer />
       <main id="home" className="min-h-screen px-6 pt-40 text-center">
         <p className="mb-3 text-sm font-semibold text-violet-600">HELLO, I'M</p>
 
